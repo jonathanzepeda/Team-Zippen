@@ -8,3 +8,9 @@
     border:1px solid #CCC;
     padding: 5px;
 }
+
+.container {
+    max-width: 75%;
+    
+
+}
