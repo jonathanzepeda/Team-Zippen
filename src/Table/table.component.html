@@ -6,6 +6,8 @@
 
 <!-- <pre>{{weatherData?.query.results.channel.item.forecast | json}}</pre> -->
 
+<div class="container">
+  <!-- Content here -->
 <input type="text" [(ngModel)]="location">
 <button (click)="getForecast(location)">Click Here</button>
 <table class="my-table">
@@ -28,3 +30,4 @@
     </tr>
   </tbody>
 </table>
+</div>
