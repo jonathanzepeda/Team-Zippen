@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './table.component';
+import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 
 import { FormsModule} from '@angular/forms';
