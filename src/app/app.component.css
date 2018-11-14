@@ -1,33 +1,18 @@
-.my-table {
-    table-layout: fixed;
-    border:1px solid #CCC;
-    width: 100%;
-}
+.app-container-grid {
+    display: grid;
+    grid-template-rows: 2fr 5fr 2fr;
+    height: 100vh;
+  }
 
-.my-table > tbody > tr > td {
-    border:1px solid #CCC;
-    padding: 5px;
-}
 
 .container {
     max-width: 75%;
 
 }
 
-.google-maps {
-    position: relative;
-    padding-bottom: 10%;
-    padding-top: 30px;
-    height: 100%;
-    overflow: hidden;
+
+.embed-responsive-item {
+    height: 400px;
+    width: 100%;
+    background-color: gray;
 }
-
-.google-maps iframe {
-    position: absolute;
-    top: 50;
-    left: 50;
-    width: 100% !important;
-    height: 100% !important;  
-}
-
-
