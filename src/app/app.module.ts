@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+// import { MatToolbarModule, MatToolbar } from '@angular/material/toolbar';
+import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
@@ -15,12 +17,14 @@ import { FormsModule} from '@angular/forms';
     AppComponent,
     MainHeaderComponent,
     MainContainerComponent,
-    MainFooterComponent
+    MainFooterComponent,
+    // MatToolbar
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
