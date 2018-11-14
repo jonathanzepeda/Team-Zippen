@@ -1,46 +1,16 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <title>Weather App</title>
+</head>
 
-
-<!-- <pre>{{ weatherData | json}}</pre> -->
-
-
-<!-- <pre>{{weatherData?.query.results.channel.item.forecast | json}}</pre> -->
-
-<div class="container">
-  <!-- Content here -->
-<input type="text" [(ngModel)]="location">
-<!-- <button (click)="getForecast(location)">Click Here</button> -->
-<button (click)="getForecast(location)" type="button" class="btn btn-info btn-sm">Search</button>
-
-
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <td>Date</td>
-      <td>Day</td>
-      <td>High</td>
-      <td>Low</td>
-      <td>Forecast</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let row of weeklyForecast">
-      <td>{{row.date}}</td>
-      <td>{{row.day}}</td>
-      <td>{{row.high}}</td>
-      <td>{{row.low}}</td>
-      <td>{{row.text}}</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<!-- I CAN'T FIGURE OUT HOW TO MAKE THIS SMALLER -->
-<div class="google-maps"></div>
-  <div class="embed-responsive embed-responsive-1by1 google-maps-iframe">
-    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.2534920900493!2d-119.7457805!3d36.8124451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80945d024e7effdb%3A0x8a47b32280fd2166!2sCalifornia+State+University%2C+Fresno!5e0!3m2!1sen!2sus!4v1541438557149" height="100" width="50" allowfullscreen></iframe>
+<body>
+  <div class="app-container-grid">
+    <main-header></main-header>
+    <main-container></main-container>
+    <main-footer></main-footer>
   </div>
+</body>
 
-
-
+</html>
