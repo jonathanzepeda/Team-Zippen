@@ -1,0 +1,36 @@
+.main-header {
+    /* background-color: #af0000; */
+    display: grid;
+    grid-template-columns: 2fr 5fr 2fr;
+    height: 100%;
+  }
+  
+ .toolbar {
+    padding-top: .5em;
+    padding-bottom: .5em;
+ } 
+
+ .cloud-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1.5em;
+    padding-left: .5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+ }
+
+ .navbar-form {
+    display: flex;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-right: .5em;
+ }
+
+ .navbar-btn {
+     padding: 10px 20px;
+ }
+
+ .search {
+    padding:.5em ;
+ }
