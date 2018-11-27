@@ -16,3 +16,31 @@
     padding: 5px;
     overflow: scroll;
 }
+
+.SearchBar-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.SearchBar-input {
+    height: 44px;
+    height: 44px;
+    border: 1px solid white;
+    background: #32383e;
+    border-right: none;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.SearchBar-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 44px;
+    padding: 0 18px;
+}
+
+.WeatherTable-container {
+    background: #32383e;
+    padding-top: 12px;
+}
