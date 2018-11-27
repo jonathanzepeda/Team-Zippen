@@ -22,6 +22,7 @@ export class MainContainerComponent implements OnInit {
   weeklyForecast: any;
   location: string;
   defaultLocation = 'Fresno';
+  weatherLocation: any;
   constructor(private http: Http) {
 
   }
@@ -48,3 +49,4 @@ export class MainContainerComponent implements OnInit {
     this.refresh(location);
   }
 }
+
