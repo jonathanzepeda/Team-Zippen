@@ -49,4 +49,3 @@ export class MainContainerComponent implements OnInit {
     this.refresh(location);
   }
 }
-

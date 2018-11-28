@@ -4,33 +4,36 @@
 
 
 <div class="my-table">
-    <div class="container-fluid WeatherTable-container">
-        <!-- Content here -->
-        <div class="SearchBar-container">
-          <input type="text" class="SearchBar-input" [(ngModel)]="location">
-          <!-- <button (click)="getForecast(location)">Click Here</button> -->
-          <button (click)="getForecast(location)" type="button" class="btn btn-info btn-sm SearchBar-button">Search</button>
-        </div>
-        <table class="table table-striped table-dark">
-          <thead>
-            <tr>
-              <td>Date</td>
-              <td>Day</td>
-              <td>High</td>
-              <td>Low</td>
-              <td>Forecast</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let row of weeklyForecast">
-              <td>{{row.date}}</td>
-              <td>{{row.day}}</td>
-              <td>{{row.high}}</td>
-              <td>{{row.low}}</td>
-              <td>{{row.text}}</td>
-            </tr>
-          </tbody>
-        </table>
+  <div class="container-fluid WeatherTable-container">
+    <!-- Content here -->
+    <div class="SearchBar-container">
+      <input type="text" class="SearchBar-input" [(ngModel)]="location">
+      <!-- <button (click)="getForecast(location)">Click Here</button> -->
+      <div class="btn-group">
+        <button (click)="getForecast(location)" type="button" class="btn btn-info btn-sm SearchBar-button">Search</button>
+        <button (click)="getForecast(location)" type="button" class="material-icons btn-danger delete-button">highlight_off</button>
       </div>
-  
+    </div>
+    <table class="table table-striped table-dark">
+      <thead>
+        <tr>
+          <td>Date</td>
+          <td>Day</td>
+          <td>High</td>
+          <td>Low</td>
+          <td>Forecast</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of weeklyForecast">
+          <td>{{row.date}}</td>
+          <td>{{row.day}}</td>
+          <td>{{row.high}}</td>
+          <td>{{row.low}}</td>
+          <td>{{row.text}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 </div>

@@ -1,20 +1,17 @@
 .container-fluid {
-    margin: 5px;
+    margin-right: 0px;
     width: 95%;
 }
 
 .my-table {
-    /* table-layout: fixed; */
-    /* border:1px solid #CCC; */
-    margin: 10px auto;
-    width: 95%;
+    table-layout: auto;
+    /* margin: 10px auto; */
+    width: 100%;
     overflow: scroll;
 }
 
 .my-table > tbody > tr > td {
-    /* border:1px solid #CCC; */
     padding: 5px;
-    overflow: scroll;
 }
 
 .SearchBar-container {
@@ -24,10 +21,11 @@
 }
 
 .SearchBar-input {
-    height: 44px;
-    height: 44px;
+    height: 30px;
+    width: 12em;
+    align-content: center;
     border: 1px solid white;
-    background: #32383e;
+    background: #fcfdfd;
     border-right: none;
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
@@ -35,12 +33,33 @@
 
 .SearchBar-button {
     border-top-left-radius: 0;
+    border-top-right-radius: 0px;
     border-bottom-left-radius: 0;
-    height: 44px;
+    border-bottom-right-radius: 0px;
+    height: 30px;
     padding: 0 18px;
+   
 }
 
 .WeatherTable-container {
     background: #32383e;
     padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    width: 100%;
+}
+
+
+.delete-button {
+    border-top-left-radius: 0;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 2px;
+    height: 30px;
+    padding: 0 18px;
+}
+
+.btn-group {
+    margin-left: 0px;
 }
