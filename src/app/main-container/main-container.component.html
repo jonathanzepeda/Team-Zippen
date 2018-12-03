@@ -15,9 +15,13 @@
           <button (click)="deleteText()" type="button" class="material-icons btn-danger delete-button">highlight_off</button>
           <button class="material-icons btn Toast btn-primary" (click)="showToast()">find_replace</button>
         </div>
+        
       </div>
     </div>
-      <p class="text population">The Population in this area is {{population}} people</p>
+    <div class="text population">
+      <p>The Population in this area is {{population}} people</p>
+      <p>The average home sale price in this area is ${{homes}} </p>
+    </div>
     <table class="table table-striped table-dark">
       <thead>
         <tr>

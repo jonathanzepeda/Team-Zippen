@@ -26,7 +26,8 @@ export class MainContainerComponent implements OnInit {
   city: string;
   defaultLocation = '93710';
   population: any;
-
+  homes: any;
+  toasts: Array<any> = [];
   constructor(private http: Http, private httpClient: HttpClient) {
 
   }
@@ -59,10 +60,20 @@ export class MainContainerComponent implements OnInit {
     // tslint:disable-next-line:max-line-length
     this.httpClient.get(url, { headers: { 'accept': 'application/json', 'apikey': 'ff142a1d1973fe33d7fcca4474fe4c70' } }).subscribe(data => {
       this.population = data['response'].result.package.item[0].popcy;
+      this.homes = data['response'].result.package.item[0].avgsaleprice;
     });
   }
 
-  deleteText () {
+  getHome(zip) {
+    const url = 'https://search.onboard-apis.com/communityapi/v2.0.0/area/full?AreaId=ZI' + zip;
+    // tslint:disable-next-line:max-line-length
+    this.httpClient.get(url, { headers: { 'accept': 'application/json', 'apikey': 'ff142a1d1973fe33d7fcca4474fe4c70' } }).subscribe(data => {
+      this.homes = data['response'].result.package.item[0].avgsaleprice;
+    });
+  }
+
+
+  deleteText() {
     this.location = '';
   }
 
