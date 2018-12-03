@@ -9,11 +9,15 @@
     <div class="SearchBar-container">
       <input type="text" class="SearchBar-input" [(ngModel)]="location">
       <!-- <button (click)="getForecast(location)">Click Here</button> -->
-      <div class="btn-group">
-        <button (click)="getForecast(location)" type="button" class="btn btn-info btn-sm SearchBar-button">Search</button>
-        <button (click)="getForecast(location)" type="button" class="material-icons btn-danger delete-button">highlight_off</button>
+      <div>
+        <div class="btn-group">
+          <button (click)="getForecast(location)" type="button" class="btn btn-info btn-sm SearchBar-button">Search</button>
+          <button (click)="getForecast(location)" type="button" class="material-icons btn-danger delete-button">highlight_off</button>
+          <button class="material-icons btn Toast btn-primary" (click)="showToast()">find_replace</button>
+        </div>
       </div>
     </div>
+      <p class="text population">The Population in this area is {{population}}</p>
     <table class="table table-striped table-dark">
       <thead>
         <tr>
