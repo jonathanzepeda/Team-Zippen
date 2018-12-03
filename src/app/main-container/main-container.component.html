@@ -11,13 +11,13 @@
       <!-- <button (click)="getForecast(location)">Click Here</button> -->
       <div>
         <div class="btn-group">
-          <button (click)="getForecast(location)" type="button" class="btn btn-info btn-sm SearchBar-button">Search</button>
-          <button (click)="getForecast(location)" type="button" class="material-icons btn-danger delete-button">highlight_off</button>
+          <button id="search" (click)="getForecast(location)" type="button" class="btn btn-info btn-sm SearchBar-button">Search</button>
+          <button (click)="deleteText()" type="button" class="material-icons btn-danger delete-button">highlight_off</button>
           <button class="material-icons btn Toast btn-primary" (click)="showToast()">find_replace</button>
         </div>
       </div>
     </div>
-      <p class="text population">The Population in this area is {{population}}</p>
+      <p class="text population">The Population in this area is {{population}} people</p>
     <table class="table table-striped table-dark">
       <thead>
         <tr>

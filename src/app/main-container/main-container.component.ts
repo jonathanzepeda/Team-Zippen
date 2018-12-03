@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
 
+
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'main-container',
@@ -59,6 +60,10 @@ export class MainContainerComponent implements OnInit {
     this.httpClient.get(url, { headers: { 'accept': 'application/json', 'apikey': 'ff142a1d1973fe33d7fcca4474fe4c70' } }).subscribe(data => {
       this.population = data['response'].result.package.item[0].popcy;
     });
+  }
+
+  deleteText () {
+    this.location = '';
   }
 
 }
