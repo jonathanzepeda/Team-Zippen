@@ -1,6 +1,6 @@
 .container-fluid {
     margin-right: 0px;
-    width: 95%;
+    width: 100%;
 }
 
 .my-table {
@@ -38,7 +38,35 @@
     border-bottom-right-radius: 0px;
     height: 30px;
     padding: 0 18px;
+}
+
+    .toast-container {
+        width: 500px;
+        position: fixed;
+        right: 20px;
+        top: 20px;
+    }
    
+.Toast {
+    border-top-left-radius: 0;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 2px;
+    height: 30px;
+    padding: 0 18px;
+
+}
+
+.population {
+    border: 2px solid black;
+    outline: #75797e solid 10px;
+    margin: auto;    
+    padding: 20px;
+    text-align: center;
+    color: white;
+    word-spacing: 0px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .WeatherTable-container {
@@ -53,9 +81,9 @@
 
 .delete-button {
     border-top-left-radius: 0;
-    border-top-right-radius: 2px;
+    border-top-right-radius: 0px;
     border-bottom-left-radius: 0;
-    border-bottom-right-radius: 2px;
+    border-bottom-right-radius: 0px;
     height: 30px;
     padding: 0 18px;
 }

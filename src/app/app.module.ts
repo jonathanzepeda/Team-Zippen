@@ -10,7 +10,10 @@ import { MainFooterComponent } from './main-footer/main-footer.component';
 
 import { HttpModule } from '@angular/http';
 
+
 import { FormsModule} from '@angular/forms';
+import { ToastModule } from './toast/toast.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { FormsModule} from '@angular/forms';
     BrowserModule,
     HttpModule,
     FormsModule,
-    MaterialModule
+    MaterialModule,
+    ToastModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
