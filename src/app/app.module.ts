@@ -15,6 +15,8 @@ import { FormsModule} from '@angular/forms';
 import { ToastModule } from './toast/toast.module';
 import { HttpClientModule } from '@angular/common/http';
 
+import { LocationService} from './location.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     ToastModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [LocationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
-
+import { LocationService } from '../location.service';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -28,7 +28,7 @@ export class MainContainerComponent implements OnInit {
   population: any;
   homes: any;
   toasts: Array<any> = [];
-  constructor(private http: Http, private httpClient: HttpClient) {
+  constructor(private http: Http, private httpClient: HttpClient, private locationService: LocationService) {
 
   }
 
@@ -39,7 +39,7 @@ export class MainContainerComponent implements OnInit {
   async refresh(location: string) {
     this.weatherData = await this.getWeatherInfo(location);
     this.weeklyForecast = this.weatherData.query.results.channel.item.forecast;
-
+    this.locationService.setLocation(this.location);
   }
 
   async getWeatherInfo(location: string) {
