@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
+import { ToastService } from '../toast/toast.service';
 
 
 @Component({
@@ -27,7 +28,6 @@ export class MainContainerComponent implements OnInit {
   defaultLocation = '93710';
   population: any;
   homes: any;
-  toasts: Array<any> = [];
   constructor(private http: Http, private httpClient: HttpClient) {
 
   }
@@ -72,9 +72,10 @@ export class MainContainerComponent implements OnInit {
     });
   }
 
-
   deleteText() {
     this.location = '';
   }
+
+
 
 }

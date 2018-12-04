@@ -5,23 +5,23 @@
 
 <div class="my-table">
   <div class="container-fluid WeatherTable-container">
-    <!-- Content here -->
     <div class="SearchBar-container">
       <input type="text" class="SearchBar-input" [(ngModel)]="location">
-      <!-- <button (click)="getForecast(location)">Click Here</button> -->
       <div>
         <div class="btn-group">
           <button id="search" (click)="getForecast(location)" type="button" class="btn btn-info btn-sm SearchBar-button">Search</button>
           <button (click)="deleteText()" type="button" class="material-icons btn-danger delete-button">highlight_off</button>
-          <button class="material-icons btn Toast btn-primary" (click)="showToast()">find_replace</button>
+          <button class="material-icons btn Toast btn-primary" (click)="showRandom()">find_replace</button>
         </div>
-        
       </div>
     </div>
+
     <div class="text population">
       <p>The Population in this area is {{population}} people</p>
       <p>The average home sale price in this area is ${{homes}} </p>
+      <p> {{showRandom}} </p>
     </div>
+
     <table class="table table-striped table-dark">
       <thead>
         <tr>
