@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
+import { ToastService } from './toast/toast.service';
 
 
 @Component({
@@ -14,8 +15,9 @@ export class AppComponent implements OnInit {
   weeklyForecast: any;
   location: string;
   defaultLocation = 'Fresno';
-  constructor(private http: Http) {
-
+  toastTypes: Array<string> = [];
+  constructor(private http: Http, private toastService: ToastService) {
+    this.toastTypes = ['success', 'info', 'warning', 'danger'];
   }
 
   async ngOnInit() {
@@ -40,4 +42,34 @@ export class AppComponent implements OnInit {
     this.refresh(location);
   }
 
+  showToast() {
+    const rand = Math.floor(Math.random() * 4);
+    console.log('My random number is: ' + rand);
+    const toastType = this.toastTypes[rand];
+    const toastMessage = 'Hi This is a message, my random number is: ' + rand;
+    const duration = 4000;
+    this.toastService.showToast(toastType, toastMessage, duration);
+  }
+
+
+}
+
+
+export class ToastComponent {
+  title = 'toast';
+  toastTypes: Array<string> = [];
+  constructor(private toastService: ToastService) {
+    this.toastTypes = ['success', 'info', 'warning', 'danger'];
+  }
+
+  // success, info, warning, danger
+
+  showToast() {
+    const rand = Math.floor(Math.random() * 4);
+    console.log('My random number is: ' + rand);
+    const toastType = this.toastTypes[rand];
+    const toastMessage = 'Hi This is a message, my random number is: ' + rand;
+    const duration = 4000;
+    this.toastService.showToast(toastType, toastMessage, duration);
+  }
 }
