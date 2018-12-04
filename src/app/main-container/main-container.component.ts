@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
+<<<<<<< HEAD
 import { LocationService } from '../location.service';
+=======
+import { ToastService } from '../toast/toast.service';
+
+>>>>>>> 47df4c0f9907f65387820a3f0391bf5e0445615d
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -72,9 +77,9 @@ export class MainContainerComponent implements OnInit {
     });
   }
 
-
   deleteText() {
     this.location = '';
   }
+
 
 }
