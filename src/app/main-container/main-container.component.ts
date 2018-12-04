@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
 import { LocationService } from '../location.service';
+import { ToastService } from '../toast/toast.service';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -27,9 +28,10 @@ export class MainContainerComponent implements OnInit {
   defaultLocation = '93710';
   population: any;
   homes: any;
-  toasts: Array<any> = [];
-  constructor(private http: Http, private httpClient: HttpClient, private locationService: LocationService) {
-
+  toastTypes: Array<string> = [];
+  // tslint:disable-next-line:max-line-length
+  constructor(private http: Http, private httpClient: HttpClient, private locationService: LocationService, private toastService: ToastService) {
+    this.toastTypes = ['success', 'info', 'warning', 'danger', 'success', 'info', 'warning', 'danger', 'success', 'info'];
   }
 
   async ngOnInit() {
@@ -74,6 +76,15 @@ export class MainContainerComponent implements OnInit {
 
   deleteText() {
     this.location = '';
+  }
+
+  showToast() {
+    const rand = Math.floor(Math.random() * 9) ;
+    console.log('My random number is: ' + rand);
+    const toastType = this.toastTypes[rand];
+    const toastMessage = 'Hey! Maybe you should try your next zip code ending with: ' + rand;
+    const duration = 5000;
+    this.toastService.showToast(toastType, toastMessage, duration);
   }
 
 
