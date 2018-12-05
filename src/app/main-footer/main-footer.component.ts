@@ -18,11 +18,11 @@ export class MainFooterComponent implements OnInit {
 
   ngOnInit() {
     // tslint:disable-next-line:max-line-length
-    this.queryString = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.google.com/maps/embed/v1/place?q=${this.location}&key=AIzaSyAhWg_efRFONuRLsWp1PIBLRGKWerOhksY&zoom=13`);
+    this.queryString = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.google.com/maps/embed/v1/place?q=${this.location}&key=AIzaSyAhWg_efRFONuRLsWp1PIBLRGKWerOhksY&zoom=10`);
     this.locationService.location.subscribe((loc) => {
       this.location = loc;
       // tslint:disable-next-line:max-line-length
-      this.queryString = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.google.com/maps/embed/v1/place?q=${this.location}&key=AIzaSyAhWg_efRFONuRLsWp1PIBLRGKWerOhksY&zoom=13`);
+      this.queryString = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.google.com/maps/embed/v1/place?q=${this.location}&key=AIzaSyAhWg_efRFONuRLsWp1PIBLRGKWerOhksY&zoom=10`);
     });
   }
 
