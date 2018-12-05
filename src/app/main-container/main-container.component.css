@@ -58,8 +58,8 @@
 }
 
 .population {
-    border: 2px solid black;
-    outline: #75797e solid 10px;
+    border: 5px solid #75797e;
+    /* outline: #75797e solid 5px; */
     margin: auto;    
     padding: 20px;
     text-align: center;
