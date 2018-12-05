@@ -30,7 +30,12 @@ export class MainContainerComponent implements OnInit {
   homes: any;
   toastTypes: Array<string> = [];
   // tslint:disable-next-line:max-line-length
-  constructor(private http: Http, private httpClient: HttpClient, private locationService: LocationService, private toastService: ToastService) {
+  constructor(
+    private http: Http,
+    private httpClient: HttpClient,
+    private locationService: LocationService,
+    private toastService: ToastService) {
+
     this.toastTypes = ['success', 'info', 'warning', 'danger', 'success', 'info', 'warning', 'danger', 'success', 'info'];
   }
 

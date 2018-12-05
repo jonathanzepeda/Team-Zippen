@@ -8,20 +8,21 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
   styleUrls: ['./main-footer.component.css']
 })
 export class MainFooterComponent implements OnInit {
-  public location = 'Fresno State';
+  public location = '93710';
   public queryString: SafeUrl = '';
   constructor(
     private locationService: LocationService,
     private domSanitizer: DomSanitizer
   ) { }
 
+
   ngOnInit() {
     // tslint:disable-next-line:max-line-length
-    this.queryString = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.google.com/maps/embed/v1/place?q=${this.location}&key=AIzaSyAhWg_efRFONuRLsWp1PIBLRGKWerOhksY&zoom=10`);
+    this.queryString = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.google.com/maps/embed/v1/place?q=${this.location}&key=AIzaSyAhWg_efRFONuRLsWp1PIBLRGKWerOhksY&zoom=13`);
     this.locationService.location.subscribe((loc) => {
       this.location = loc;
       // tslint:disable-next-line:max-line-length
-      this.queryString = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.google.com/maps/embed/v1/place?q=${this.location}&key=AIzaSyAhWg_efRFONuRLsWp1PIBLRGKWerOhksY&zoom=10`);
+      this.queryString = this.domSanitizer.bypassSecurityTrustResourceUrl(`https://www.google.com/maps/embed/v1/place?q=${this.location}&key=AIzaSyAhWg_efRFONuRLsWp1PIBLRGKWerOhksY&zoom=13`);
     });
   }
 
