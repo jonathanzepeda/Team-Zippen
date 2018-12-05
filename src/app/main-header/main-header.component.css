@@ -34,3 +34,27 @@
  .search {
     padding:.5em ;
  }
+
+ p.one {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #ccc; 
+}
+
+p.two {
+    border-style: solid;
+    border-width: medium;
+    border-color:  #CCC;
+}
+
+p.three {
+    border-style: solid;
+    border-width: 2px 10px 4px 20px;
+    border-color: #CCC;
+}
+
+p.three {
+    border-style: solid;
+    border-width: 2px 10px 4px 20px;
+    border-color: #ccc;
+}
