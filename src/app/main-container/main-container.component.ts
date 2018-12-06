@@ -59,8 +59,7 @@ export class MainContainerComponent implements OnInit {
   }
 
   async getForecast(location: string) {
-    this.refresh(location);
-  }
+    this.refresh(location);  }
 
   getApi(zip) {
     const url = 'https://search.onboard-apis.com/communityapi/v2.0.0/area/full?AreaId=ZI' + zip;
