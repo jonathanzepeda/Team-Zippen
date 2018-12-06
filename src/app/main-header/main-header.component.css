@@ -1,7 +1,7 @@
 .main-header {
     /* background-color: #af0000; */
     display: grid;
-    grid-template-columns: 2fr 5fr 2fr;
+    grid-template-columns: 3fr 5fr 3fr;
     height: 100%;
   }
   
@@ -20,18 +20,17 @@
     padding-bottom: .5em;
  }
 
- 
  .navbar {
     display: flex;
     padding-top: .5em;
     padding-bottom: .5em;
     width: 100%;
-    top: 0;
-    border-style: solid;
-    border-width: 5px;
-    border-color: #75797e;  
+    top: 10;
+    border-style: double;
+    border-width: 10px;
+    border-color: #050d16af;
+    background-image: url(http://www.pngmart.com/files/1/Clouds-PNG-HD.png)
  }
-
 
  .navbar-btn {
      padding: 10px 20px;
@@ -41,6 +40,9 @@
     padding:.5em ;
  }
 
+ .header {
+    background-color: lightblue;
+}
 
 /* We do not need these. They are added to .navbar CSS */
 
